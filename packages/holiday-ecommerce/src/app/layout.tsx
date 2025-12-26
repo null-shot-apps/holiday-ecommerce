@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import AuthProvider from "@/components/AuthProvider";
+import { AuthProvider } from "@/components/AuthProvider";
+import Navbar from "@/components/Navbar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -14,8 +15,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Holiday E-commerce - Crypto Payments Accepted",
-  description: "Shop holiday gifts with up to 30% off. Pay with crypto and get extra 5% off!",
+  title: "Holiday E-commerce - Crypto Payments",
+  description: "Shop holiday deals and pay with cryptocurrency",
 };
 
 export default function RootLayout({
@@ -28,7 +29,10 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <AuthProvider>{children}</AuthProvider>
+        <AuthProvider>
+          <Navbar />
+          {children}
+        </AuthProvider>
       </body>
     </html>
   );

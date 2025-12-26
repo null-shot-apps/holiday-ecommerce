@@ -98,10 +98,10 @@ export default function Landing() {
             🛍️ Shop Now
           </Link>
           <Link
-            href="/auth/signup"
+            href="/login"
             className="px-8 py-4 bg-white/20 backdrop-blur-lg text-white font-bold text-lg rounded-full hover:bg-white/30 transition-all border-2 border-white/50"
           >
-            Create Account
+            Sign In
           </Link>
         </div>
 
@@ -116,7 +116,7 @@ export default function Landing() {
             {
               icon: '₿',
               title: 'Crypto Payments',
-              desc: 'BTC, ETH, USDT, USDC',
+              desc: 'BTC, ETH, USDC',
             },
             {
               icon: '🚚',
